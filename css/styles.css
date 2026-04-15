@@ -152,7 +152,11 @@ h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 
   display: flex; align-items: center; justify-content: center;
 }
 .mobile-menu-btn { display: none; }
-@media (max-width: 900px) { .nav-links { display: none; } .mobile-menu-btn { display: flex; } }
+@media (max-width: 900px) { 
+  .nav-links { display: none; } 
+  .nav-links.active { display: flex; flex-direction: column; position: absolute; top: var(--nav-height); left: 0; right: 0; background: var(--glass-bg); backdrop-filter: blur(20px); padding: 24px; border-bottom: 1px solid var(--glass-border); gap: 20px; box-shadow: var(--shadow-xl); align-items: center;}
+  .mobile-menu-btn { display: flex; } 
+}
 
 /* HERO SECTION CSS (Integrated Native) */
 .hero-section {
@@ -222,7 +226,7 @@ h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 
   .hs-text { align-items: center; text-align: center !important; }
   .hs-text-reverse .glass-panel { align-items: center; }
   .hs-title { font-size: 44px; }
-  .hero-switcher { bottom: -30px; }
+  .hero-switcher { bottom: 0; }
   .switch-btn { padding: 10px 16px; font-size: 12px; }
 }
 

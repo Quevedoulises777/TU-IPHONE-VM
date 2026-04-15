@@ -4,6 +4,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* --- 0. MOBILE NAV LOGIC --- */
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if(mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+        navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('active')));
+    }
+
     /* --- 1. HERO CAROUSEL LOGIC --- */
     const heroSection = document.getElementById('hero');
     const heroBg = document.getElementById('heroBg');
