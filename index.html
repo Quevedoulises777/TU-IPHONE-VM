@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU IPHONE VM | Premium Reseller</title>
+    <meta name="description" content="El mejor stock de iPhone en San Luis. Compra tu dispositivo Apple ideal hoy.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar glass-header">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i class="ph-fill ph-apple-logo text-focus"></i>
+                <span class="logo-text">TU IPHONE VM</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#hero">INICIO</a>
+                <a href="#productos">PRODUCTOS</a>
+                <a href="#cotizador">PLAN CANJE</a>
+                <a href="#accesorios">ACCESORIOS</a>
+                <a href="#locales">LOCALES</a>
+                <a href="#comunidad">COMUNIDAD</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="cart-wrapper">
+                    <button id="cartBtn" class="btn-icon" aria-label="Ver Carrito">
+                        <i class="ph ph-shopping-bag"></i>
+                        <span id="cartCount" class="badge">0</span>
+                    </button>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn btn-icon">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Overlay -->
+    <div id="cartOverlay" class="cart-overlay">
+        <div class="cart-sidebar glass-panel">
+            <div class="cart-header">
+                <h2>Tu Resumen</h2>
+                <button id="closeCartBtn" class="btn-icon"><i class="ph ph-x"></i></button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <div class="empty-cart-msg">Tu bolsa está vacía.</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total estimado</span>
+                    <span id="cartTotalValue" class="text-glow">$0</span>
+                </div>
+                <button id="checkoutBtn" class="btn-whatsapp w-100 check-btn">
+                    <i class="ph-fill ph-whatsapp-logo"></i> Finalizar Compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section" data-active="0">
+            <div class="hero-radial-bg" id="heroBg"></div>
+            
+            <div class="container hero-content-new">
+                
+                <!-- Slide 1: Novedades -->
+                <div class="h-slide active" id="slide-0">
+                    <div class="hs-visual">
+                        <div class="hs-ring hs-ring-orange"></div>
+                        <div class="hs-glow hs-glow-orange"></div>
+                        <div class="hs-img-container" style="transform: scale(1.15);">
+                            <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/ip%2017%20promax.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvaXAgMTcgcHJvbWF4LnBuZyIsImlhdCI6MTc3NjIwOTAxNywiZXhwIjoxODA3NzQ1MDE3fQ.4zwTCQqzUTbAhJXI9ha86okTd326AEhUQD-IwHpcAXA" alt="iPhone 17 Pro Max">
+                        </div>
+                        <div class="hs-pill">
+                            <span class="pulse-dot bg-orange-500"></span>
+                            Novedad Exclusiva
+                        </div>
+                    </div>
+                    <div class="hs-text">
+                        <h2 class="hs-label text-orange">NOVEDADES</h2>
+                        <h1 class="hs-title title-gradient">iPhone 17 Pro Max</h1>
+                        <p class="hs-desc">Experimenta el poder absoluto con la pantalla OLED de 6.9" a 120Hz y el imparable chip A19 Pro. Diseño de titanio naranja vibrante.</p>
+                        
+                        <div class="hs-features glass-panel">
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-cpu text-orange"></i> Chip A19 Pro 12GB RAM</span>
+                                </div>
+                            </div>
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-camera text-orange"></i> 3 Cámaras 48MP Zoom 8x</span>
+                                </div>
+                            </div>
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-drop text-orange"></i> Cámara de Vapor Naranja Titanio</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hs-battery">
+                            <i class="ph-fill ph-battery-full text-orange"></i>
+                            <span>Batería <strong class="text-dynamic">5,088 mAh</strong> MagSafe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Promociones -->
+                <div class="h-slide" id="slide-1">
+                    <div class="hs-visual hs-visual-reverse">
+                        <div class="hs-ring hs-ring-blue"></div>
+                        <div class="hs-glow hs-glow-blue"></div>
+                        <div class="hs-img-container">
+                            <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/ip%2015%20gris%20para%20hero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvaXAgMTUgZ3JpcyBwYXJhIGhlcm8ucG5nIiwiaWF0IjoxNzc2MjA5MDgwLCJleHAiOjE4MDc3NDUwODB9.5MNiFwpR8Nb_X5gtwLC_FEneQ1LSd8p6FAgl3fNB3aI" alt="iPhone Oferta">
+                        </div>
+                        <div class="hs-pill">
+                            <span class="pulse-dot bg-blue-500"></span>
+                            Hot Sale
+                        </div>
+                    </div>
+                    <div class="hs-text hs-text-reverse">
+                        <h2 class="hs-label text-blue">PROMOCIONES</h2>
+                        <h1 class="hs-title title-gradient">iPhone 15 Pro</h1>
+                        <p class="hs-desc">El equilibrio perfecto en Titanium Blue. Aprovecha nuestros descuentos especiales de la semana en modelos usados como nuevos.</p>
+                        
+                        <div class="hs-features glass-panel">
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-tag text-blue"></i> Descuentos exclusivos de la semana</span>
+                                </div>
+                            </div>
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-battery-charging text-blue"></i> Usados seleccionados igual a nuevos</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hs-battery">
+                            <i class="ph-fill ph-check-circle text-blue"></i>
+                            <span>Garantía <strong class="text-dynamic">6 Meses</strong> Full</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Comunidad -->
+                <div class="h-slide" id="slide-2">
+                    <div class="hs-visual">
+                        <div class="hs-ring hs-ring-green"></div>
+                        <div class="hs-glow hs-glow-green"></div>
+                        <div class="hs-img-container" style="padding:0; overflow:hidden;">
+                            <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/clientes%201.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvY2xpZW50ZXMgMS5wbmciLCJpYXQiOjE3NzYyMDkxMjEsImV4cCI6MTgwNzc0NTEyMX0.9vuEzEgExHsOKTDiRIap2-L9qSpQ_aQLNNrsBYRsYc4" alt="Comunidad iPhoneVM" style="object-fit:cover; border-radius:3rem;">
+                        </div>
+                        <div class="hs-pill">
+                            <span class="pulse-dot bg-green-500"></span>
+                            Comunidad VM
+                        </div>
+                    </div>
+                    <div class="hs-text">
+                        <h2 class="hs-label text-green">COMUNIDAD</h2>
+                        <h1 class="hs-title title-gradient">Experiencia Total</h1>
+                        <p class="hs-desc">Cientos de clientes eligen nuestro servicio. Entregamos equipos blindados con la mejor atención de San Luis y Córdoba.</p>
+                        
+                        <div class="hs-features glass-panel">
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-star text-green"></i> Cientos de clientes satisfechos</span>
+                                </div>
+                            </div>
+                            <div class="hs-feat">
+                                <div class="hs-feat-top">
+                                    <span class="hs-feat-name"><i class="ph-fill ph-truck text-green"></i> Envíos rápidos y equipos asegurados</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="hs-battery">
+                            <i class="ph-fill ph-storefront text-green"></i>
+                            <span>Visítanos en <strong class="text-dynamic">Nuestras Sucursales</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="hero-switcher">
+                <div class="switcher-track glass-panel">
+                    <div class="switcher-active-bg" id="switcherBg"></div>
+                    <button class="switch-btn active" data-index="0">Novedades</button>
+                    <button class="switch-btn" data-index="1">Promociones</button>
+                    <button class="switch-btn" data-index="2">Comunidad</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Products Section (2 Rows Slider) -->
+        <section id="productos" class="section container">
+            <div class="section-header">
+                <h2 class="title-gradient">Dispositivos. La excelencia hecha titanio.</h2>
+                <p>Navega a través de nuestro catálogo filtrado. Modelos del SE al 17.</p>
+            </div>
+
+            <!-- Smart Filter Bar -->
+            <div class="filter-bar glass-panel">
+                <div class="search-box">
+                    <i class="ph ph-magnifying-glass text-focus"></i>
+                    <input type="text" id="searchInput" placeholder="Ej: iPhone 14 Pro Sellado...">
+                </div>
+                <div class="filters-wrap">
+                    <select id="filterModel" class="glass-select">
+                        <option value="all">Todas las Series</option>
+                        <option value="17">Serie 17</option>
+                        <option value="16">Serie 16</option>
+                        <option value="15">Serie 15</option>
+                        <option value="14">Serie 14</option>
+                        <option value="13">Serie 13</option>
+                        <option value="SE">Serie SE</option>
+                    </select>
+                    <select id="filterStatus" class="glass-select">
+                        <option value="all">Todos los Estados</option>
+                        <option value="sellado">Nuevo / Sellado</option>
+                        <option value="certificado">Usado Certificado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Carousel (2 filas dinámico por CSS grid slider) -->
+            <div class="slider-wrapper">
+                <button class="slider-btn prev-btn" id="prodPrev"><i class="ph ph-caret-left"></i></button>
+                <div class="slider-track-container" id="productSliderTrack">
+                    <div class="product-grid" id="productGrid">
+                        <!-- Products injected via JS -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="prodNext"><i class="ph ph-caret-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Custom Configurator Section -->
+        <section id="cotizador" class="section cotizador-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="title-gradient">Plan Canje.</h2>
+                    <p>Cotiza tu equipo actual como parte de pago al instante.</p>
+                </div>
+                
+                <div class="coti-grid">
+                    <div class="coti-visual glass-panel">
+                        <div class="coti-glow"></div>
+                        <img id="cotiImg" src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=800" alt="Configurador">
+                    </div>
+                    
+                    <div class="coti-form glass-panel">
+                        <h3 class="coti-title">Cotiza tu Equipo Actual</h3>
+                        
+                        <div class="config-group">
+                            <label>1. Serie del Equipo</label>
+                            <select id="cfgSeries" class="glass-select check-calc">
+                                <option value="17" data-base="1100" data-img="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=800">iPhone 17</option>
+                                <option value="16" data-base="900" data-img="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&q=80&w=800">iPhone 16</option>
+                                <option value="15" data-base="750" data-img="https://images.unsplash.com/photo-1696446700622-df7a19cff781?auto=format&fit=crop&q=80&w=800">iPhone 15</option>
+                                <option value="14" data-base="600" data-img="https://images.unsplash.com/photo-1663465374312-7bfb3017fb9b?auto=format&fit=crop&q=80&w=800">iPhone 14</option>
+                            </select>
+                        </div>
+
+                        <div class="config-group">
+                            <label>2. Versión</label>
+                            <div class="pill-group" id="cfgVersion">
+                                <button class="pill-btn active" data-mod="0" data-name="Normal">Normal</button>
+                                <button class="pill-btn" data-mod="100" data-name="Plus/Air">Plus / Air</button>
+                                <button class="pill-btn" data-mod="200" data-name="Pro">Pro</button>
+                                <button class="pill-btn" data-mod="300" data-name="Pro Max">Pro Max</button>
+                            </div>
+                        </div>
+
+                        <div class="config-group">
+                            <label>3. Capacidad / Almacenamiento</label>
+                            <div class="pill-group" id="cfgCapacity">
+                                <button class="pill-btn active" data-mod="0" data-name="128GB">128GB</button>
+                                <button class="pill-btn" data-mod="100" data-name="256GB">256GB</button>
+                                <button class="pill-btn" data-mod="250" data-name="512GB">512GB</button>
+                                <button class="pill-btn" data-mod="400" data-name="1TB">1TB</button>
+                            </div>
+                        </div>
+
+                        <div class="config-group">
+                            <label>4. Estado Estético</label>
+                            <div class="pill-group" id="cfgState">
+                                <button class="pill-btn active" data-mod="0" data-name="Impecable">Impecable</button>
+                                <button class="pill-btn" data-mod="-50" data-name="Detalles estéticos">Detalles estéticos</button>
+                                <button class="pill-btn" data-mod="-100" data-name="Cambiado/Roto">Pantalla/Tapa Rota</button>
+                            </div>
+                        </div>
+
+                        <div class="config-group">
+                            <label>5. Condición de Batería</label>
+                            <div class="pill-group" id="cfgBattery">
+                                <button class="pill-btn active" data-mod="0" data-name="+85%">85% - 100%</button>
+                                <button class="pill-btn" data-mod="-30" data-name="75-84%">75% - 84%</button>
+                                <button class="pill-btn" data-mod="-60" data-name="-75%">Menos de 75% o Service</button>
+                            </div>
+                        </div>
+
+                        <div class="coti-result">
+                            <div class="price-wrap">
+                                <span>Valor Estimado a Favor</span>
+                                <strong class="text-glow" id="cotiFinalPrice">USD 1250</strong>
+                            </div>
+                            <button class="btn-whatsapp w-100" id="cotiSendBtn">
+                                <i class="ph-fill ph-whatsapp-logo"></i> Solicitar Canje por WhatsApp
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accesorios" class="section container">
+            <div class="section-header">
+                <h2 class="title-gradient">Magia complementaria.</h2>
+                <p>Accesorios originales para tu ecosistema Apple.</p>
+            </div>
+            
+            <div class="slider-wrapper">
+                <button class="slider-btn prev-btn" id="accPrev"><i class="ph ph-caret-left"></i></button>
+                <div class="slider-track-container" id="accSliderTrack">
+                    <div class="acc-grid" id="accessoriesGrid">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="accNext"><i class="ph ph-caret-right"></i></button>
+            </div>
+        </section>
+
+        <!-- 5. Locales y 6. Redes -->
+        <section id="locales" class="section locales-comunidad">
+            <div class="container dual-grid">
+                
+                <!-- Locales -->
+                <div class="locales-col glass-panel">
+                    <h2 class="title-gradient text-left">Nuestras Sucursales.</h2>
+                    <div class="local-card">
+                        <img src="./oficina_san_luis_1776210359721.png" class="local-img" style="border-radius:12px; object-fit:cover;" alt="Local San Luis">
+                        <div class="local-info">
+                            <h3>📍 San Luis</h3>
+                            <button class="btn-secondary map-btn"><i class="ph ph-map-pin"></i> Ver Mapa</button>
+                        </div>
+                    </div>
+                    <div class="local-card">
+                        <img src="./oficina_villa_mercedes_1776210375829.png" class="local-img" style="border-radius:12px; object-fit:cover;" alt="Local Villa Mercedes">
+                        <div class="local-info">
+                            <h3>📍 Villa Mercedes</h3>
+                            <button class="btn-secondary map-btn"><i class="ph ph-map-pin"></i> Ver Mapa</button>
+                        </div>
+                    </div>
+                    <div class="local-card">
+                        <img src="./oficina_nueva_cordoba_1776210780241.png" class="local-img" style="border-radius:12px; object-fit:cover;" alt="Local Nueva Córdoba">
+                        <div class="local-info">
+                            <h3>📍 Nueva Córdoba</h3>
+                            <button class="btn-secondary map-btn"><i class="ph ph-map-pin"></i> Ver Mapa</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comunidad -->
+                <div class="comunidad-col glass-panel" id="comunidad">
+                    <div class="comu-header">
+                        <h2 class="title-gradient text-left">Comunidad y Reseñas.</h2>
+                        <a href="https://www.instagram.com/tu.iphonevm/" target="_blank" class="btn-ig">
+                            <i class="ph-fill ph-instagram-logo"></i> Seguir @TUIPHONEVM
+                        </a>
+                    </div>
+                    <p class="comu-desc">Mira las fotos y experiencias de nuestros clientes al recibir sus equipos blindados.</p>
+                    
+                    <div class="social-grid">
+                        <div class="social-photo">
+                             <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/clientes%201.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvY2xpZW50ZXMgMS5wbmciLCJpYXQiOjE3NzYyMDk5NDIsImV4cCI6MTgwNzc0NTk0Mn0.zIIu5bw3qvimR0L17E6i88shP_5K1Og7JM2K5Q0Mffg" alt="Cliente Feliz">
+                             <span class="ig-tag">@cliente_feliz</span>
+                        </div>
+                        <div class="social-photo">
+                             <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/clientes%202.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvY2xpZW50ZXMgMi5wbmciLCJpYXQiOjE3NzYyMDk5NDksImV4cCI6MTgwNzc0NTk0OX0.I3oAQRrImYZbem_KIVFo549jm3Odtht3NIe4Emhuf_g" alt="Comunidad 2">
+                        </div>
+                        <div class="social-photo">
+                             <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/clientes%203.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvY2xpZW50ZXMgMy5wbmciLCJpYXQiOjE3NzYyMDk5NTYsImV4cCI6MTgwNzc0NTk1Nn0.eZItU93mgHJjbtE6R6RnuC6L69HJj4STJEDtqtK1_QY" alt="Comunidad 3">
+                        </div>
+                        <div class="social-photo">
+                             <img src="https://tligscofqdyubgmumyla.supabase.co/storage/v1/object/sign/iphone/clientes%201.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9mZjQwOWM4Zi0wYmI1LTQyODMtYjZlZS1iNDQ2MTY3YjQxMzUiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpcGhvbmUvY2xpZW50ZXMgMS5wbmciLCJpYXQiOjE3NzYyMDkxMjEsImV4cCI6MTgwNzc0NTEyMX0.9vuEzEgExHsOKTDiRIap2-L9qSpQ_aQLNNrsBYRsYc4" alt="Comunidad 4">
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-mini">
+                        <div class="stars text-glow"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="review-text">"Excelente atención en San Luis, compré el 15 Pro Max sellado y la configuración fue rapidísima. ¡Recomendadísimos!"</p>
+                        <span class="reviewer">- Martín G.</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="ph-fill ph-apple-logo text-focus"></i>
+                    TU IPHONE VM
+                </a>
+                <p>Tu ecosistema Apple con la máxima confianza en Cuyo y Córdoba.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-col">
+                    <h4>Asistencia Rápidas</h4>
+                    <a href="https://api.whatsapp.com/send/?phone=5492664507096" target="_blank"><i class="ph ph-whatsapp-logo"></i> Soporte Vía WhatsApp</a>
+                    <a href="https://www.instagram.com/tu.iphonevm/" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram Oficial</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 TU IPHONE VM. Todos los derechos reservados. Diseño Titanium Edition.</p>
+        </div>
+    </footer>
+
+    <!-- Product Config Modal -->
+    <div class="cart-overlay" id="configModal">
+        <div class="cart-sidebar glass-panel" style="width: 450px;">
+            <div class="cart-header">
+                <h3>Configurar <span id="modalProdTitle">Equipo</span></h3>
+                <button class="btn-icon" id="closeConfigBtn"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="cart-items" style="padding: 24px; overflow-y: auto;">
+                
+                <div class="config-group">
+                    <label>1. Versión o Variante</label>
+                    <div class="pill-group" id="prodVersion">
+                        <button class="pill-btn active" data-mod="0" data-name="Base">Base</button>
+                        <button class="pill-btn" data-mod="100" data-name="Plus / Pro">Plus / Pro</button>
+                        <button class="pill-btn" data-mod="250" data-name="Pro Max / Air">Pro Max / Air</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>2. Capacidad</label>
+                    <div class="pill-group" id="prodCap">
+                        <button class="pill-btn active" data-mod="0" data-name="128GB">128GB</button>
+                        <button class="pill-btn" data-mod="100" data-name="256GB">256GB</button>
+                        <button class="pill-btn" data-mod="250" data-name="512GB">512GB</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>3. Color</label>
+                    <div class="pill-group" id="prodColor">
+                        <button class="pill-btn active" data-mod="0" data-name="Negro/Gris">Oscuro</button>
+                        <button class="pill-btn" data-mod="0" data-name="Blanco/Plata">Claro</button>
+                        <button class="pill-btn" data-mod="0" data-name="Color Especial">Color</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>4. Condición de Batería (Usados)</label>
+                    <div class="pill-group" id="prodBat">
+                        <button class="pill-btn active" data-mod="0" data-name="-">No aplica (Nuevo)</button>
+                        <button class="pill-btn" data-mod="-30" data-name="80%-89%">80% - 89%</button>
+                        <button class="pill-btn" data-mod="50" data-name="90%-100%">90% - 100%</button>
+                    </div>
+                </div>
+
+                <div class="coti-result" style="margin-top: 32px;">
+                    <div class="price-wrap">
+                        <span>Total Configurado</span>
+                        <strong class="text-glow" id="modalFinalPrice">USD 0</strong>
+                    </div>
+                    <button class="btn-whatsapp w-100" id="modalAddToCart">
+                        <i class="ph-fill ph-shopping-cart-simple"></i> Sumar a la Bolsa
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>
