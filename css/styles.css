@@ -209,7 +209,7 @@ h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 
 .text-orange { color: #f97316; } .bg-orange-500 { background-color: #f97316; box-shadow: 0 0 10px rgba(249,115,22,0.8); } .hs-ring-orange { border-left-color: #f97316; } .hs-glow-orange { background: linear-gradient(135deg, #ea580c, #7c2d12); } .title-orange { background-image: linear-gradient(to bottom right, #fff, #fdba74); } 
 .text-blue { color: #3b82f6; } .bg-blue-500 { background-color: #3b82f6; box-shadow: 0 0 10px rgba(59,130,246,0.8); } .hs-ring-blue { border-right-color: #3b82f6; } .hs-glow-blue { background: linear-gradient(135deg, #2563eb, #1e3a8a); } .title-blue { background-image: linear-gradient(to bottom right, #fff, #93c5fd); }
 .text-green { color: #10b981; } .bg-green-500 { background-color: #10b981; box-shadow: 0 0 10px rgba(16,185,129,0.8); } .hs-ring-green { border-left-color: #10b981; } .hs-glow-green { background: linear-gradient(135deg, #059669, #064e3b); } .title-green { background-image: linear-gradient(to bottom right, #fff, #6ee7b7); }
-.hero-switcher { position: absolute; bottom: -10px; left: 0; right: 0; display: flex; justify-content: center; z-index: 50; }
+.hero-switcher { position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; z-index: 50; }
 .switcher-track { display: flex; padding: 6px; border-radius: 50px; position: relative; }
 .switch-btn { position: relative; z-index: 2; padding: 12px 28px; font-size: 14px; font-weight: 600; color: var(--text-secondary); transition: color 0.3s; }
 .switch-btn.active, .switch-btn:hover { color: var(--text-primary); }
@@ -226,8 +226,14 @@ h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 
   .hs-text { align-items: center; text-align: center !important; }
   .hs-text-reverse .glass-panel { align-items: center; }
   .hs-title { font-size: 44px; }
-  .hero-switcher { bottom: 0; }
+  .hero-switcher { bottom: 20px; }
   .switch-btn { padding: 10px 16px; font-size: 12px; }
+}
+
+/* Aumento de tamaño para la imagen "Guía Uno" (Primer Slide: iPhone 17) */
+#slide-0 .hs-img-container img {
+  scale: 2;
+  z-index: 15;
 }
 
 /* SMART FILTERS */
@@ -318,9 +324,10 @@ h2 { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 
 .cotizador-section { background: rgba(255,255,255,0.02); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
 .coti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: stretch; margin-top: 40px; }
 @media (max-width: 900px) { .coti-grid { grid-template-columns: 1fr; } }
-.coti-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px; padding: 40px; }
+.coti-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px; padding: 40px; overflow: hidden; }
 .coti-glow { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(249,115,22,0.15), transparent); border-radius: inherit; }
-.coti-visual img { position: relative; z-index: 2; max-height: 350px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6)); }
+.coti-visual img { position: relative; z-index: 2; max-height: 450px; width: 120%; transform: scale(1.2); filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); transition: transform 0.5s ease; }
+.coti-visual img:hover { transform: scale(1.25); }
 
 .coti-form { padding: 40px; display: flex; flex-direction: column; gap: 24px; }
 .coti-title { font-size: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 16px; margin-bottom: 8px; }
